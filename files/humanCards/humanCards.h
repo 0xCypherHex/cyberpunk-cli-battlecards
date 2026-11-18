@@ -19,7 +19,7 @@ struct StHumanCards {
   int iPassiveRegen; // Passive Encryption Regen (5%)
   int iActiveHeal;   // Active Heal
   int iIntegrity;    // Health / Integrity (0-500)
-  int iCritChance;   // Critical hit chance percentage (0-100)
+  float fCritChance;   // Critical hit chance percentage (0-100)
   char szAsciiArt[1500];
 };
 
