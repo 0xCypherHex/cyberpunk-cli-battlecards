@@ -1,9 +1,6 @@
 #include "humanCards.h"
 
 // Arreglo que contiene los personajes de la estructura
-
-#include "humanCards.h"
-
 struct StHumanCards humanDeck[] = {
     {"Lucy Kushinada",
      "Deep-net infiltration prodigy armed with deadly monowire.", 26, 11, 92,
