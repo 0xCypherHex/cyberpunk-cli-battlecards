@@ -8,7 +8,7 @@ archivo. Es una medida de seguridad.
 #ifndef HUMANCARDS_H
 #define HUMANCARDS_H
 
-// Macro donde define el tamaño del arreglo
+// Macro que define el tamaño del arreglo
 #define HUMAN_DECK_SIZE 12
 
 struct StHumanCards {
