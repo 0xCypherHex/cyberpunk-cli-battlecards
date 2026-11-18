@@ -6,6 +6,8 @@ si YA existe  se salta todo hasta endif, si NO existe, entra y lee todo el
 archivo. Es una medida de seguridad.
 */
 #ifndef HUMANCARDS_H
+
+// La bandera para que el compilador sepa que este archivo ya fue leido
 #define HUMANCARDS_H
 
 // Macro que define el tamaño del arreglo
