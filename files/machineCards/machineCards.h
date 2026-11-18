@@ -10,7 +10,7 @@ struct StMachineCards {
   int iEncryptionRegen;      // Regeneración pasiva (Encryption)
   int iDefense;              // Defensa / Probabilidad de esquivar
   int iHPIntegrity;
-  int iCritChance;
+  float fCritChance;
   char szAsciiArt[1500];
 };
 
