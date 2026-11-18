@@ -1,4 +1,4 @@
-#include "humanCards.h"
+#include "humanCards/humanCards.h"
 #include "machineCards.h"
 #include <stdio.h>
 
