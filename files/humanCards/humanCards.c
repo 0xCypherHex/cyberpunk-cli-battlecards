@@ -1,46 +1,43 @@
 #include "humanCards.h"
 
-// Arreglo que contiene los personajes de la estructura
-struct StHumanCards humanDeck[] = {
+struct StHumanCards humanDeck[HUMAN_DECK_SIZE] = {
     {"Lucy Kushinada",
-     "Deep-net infiltration prodigy armed with deadly monowire.", 26, 11, 92,
-     220, "Deep Dive Breach",
-     "Splices enemy neural ports from the Deep Net to bypass outer firewalls.",
-     "Deal 3 consecutive strikes."},
+     "Deep-net infiltration prodigy armed with deadly monowire.", 26, 22, 92,
+     220, 46},
     {"Kiwi", "Stoic veteran netrunner specializing in corporate ICE defense.",
-     34, 10, 90, 195, "ICE Jammer",
-     "Floods hostile subnets with white noise to lock down enemy cyberware.",
-     "Attack and choose any card in your possession to deal extra damage "
-     "during the same turn."},
+     34, 20, 90, 195, 45},
     {"T-Bug", "Tactical remote operator and master of security bypasses.", 22,
-     9, 98, 175, "Neural Routed Bypass",
-     "Hijacks local security nodes to expose critical target vulnerabilities.",
-     "Strip all defense from enemy machine cards for 2 turns or deal 2 "
-     "critical hits (44x2) to human cards."},
+     18, 98, 175, 49},
     {"Alt Cunningham",
      "Legendary creator of Soulkiller and rogue digital entity beyond the "
      "Blackwall.",
-     42, 14, 75, 280, "Ghost in the Net",
-     "Unleashes pure digital devastation from beyond the Blackwall.",
-     "Deal 50% damage to any machine card (Max heal) and disable The "
-     "Blackwall's special attack if faced directly."},
+     42, 28, 76, 280, 38},
     {"Evelyn Parker",
      "High-class doll and braindance intelligence broker with Konpeki Plaza "
      "intel.",
-     14, 9, 100, 170, "Braindance Recon",
-     "Reconstructs dual-layer sensory logs to predict every enemy move.",
-     "Choose any card in your hand to make it immune to all enemy attacks."},
+     14, 18, 100, 170, 50},
     {"V",
      "Legendary Afterlife mercenary sharing consciousness with the Relic "
      "biochip.",
-     44, 22, 60, 440, "Relic Overdrive",
-     "Nanites reconstruct damaged neural tissue while boosting combat "
-     "reflexes.",
-     "Heal all cards in your possession (60 HP) and buff them with 100% extra "
-     "attack (grants critical strikes)."},
-
-    {},
-
-    {},
+     44, 44, 60, 440, 30},
+    {"Morgan Blackhand",
+     "The Solo of Solos; pragmatic combat legend who relies on skill over "
+     "chrome.",
+     38, 42, 70, 425, 35},
+    {"Johnny Silverhand",
+     "Rebel rockerboy and Samurai frontman armed with a Malorian Arms 3516.",
+     36, 34, 80, 340, 40},
+    {"Adam Smasher",
+     "Full-borg Arasaka enforcer in a heavily armored Dragoon chassis.", 50, 50,
+     50, 500, 25},
+    {"David Martinez",
+     "Edgerunner prodigy pushing a military-grade Sandevistan to the limit.",
+     48, 44, 54, 450, 27},
+    {"Jackie Welles",
+     "Loyal Heywood solo dual-wielding his golden pistols La Chingona Dorada.",
+     26, 34, 88, 330, 44},
+    {"Solomon Reed",
+     "Veteran FIA sleeper agent and master of counter-intelligence in Dogtown.",
+     20, 38, 90, 370, 45}
 
 };
