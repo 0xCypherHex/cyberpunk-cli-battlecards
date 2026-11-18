@@ -1,5 +1,6 @@
 #include "humanCards.h"
 
+// Mazo de personajes humanos
 struct StHumanCards humanDeck[HUMAN_DECK_SIZE] = {
     {"Lucy Kushinada",
      "Deep-net infiltration prodigy armed with deadly monowire.", 26, 22, 92,
