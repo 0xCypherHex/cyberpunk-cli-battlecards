@@ -15,7 +15,6 @@ archivo. Es una medida de seguridad.
 
 struct StHumanCards {
   char szName[50];
-  char szDescription[120];
   int iPayload;      // Attack (0-50)
   int iPassiveRegen; // Passive Encryption Regen (5%)
   int iActiveHeal;   // Active Heal
