@@ -10,7 +10,8 @@ struct StMachineCards {
   int iEncryptionRegen;      // Regeneración pasiva (Encryption)
   int iDefense;              // Defensa / Probabilidad de esquivar
   int iHPIntegrity;
-  int iCritChance; // HP (Integrity sobre 200)
+  int iCritChance;
+  char szAsciiArt[1500];
 };
 
 // Para que main.c pueda ver el mazo
