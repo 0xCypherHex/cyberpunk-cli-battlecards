@@ -19,7 +19,7 @@ struct StHumanCards {
   int iActiveHeal;   // Active Heal
   int iIntegrity;    // Health / Integrity (0-500)
   int iCritChance;   // Critical hit chance percentage (0-100)
-  // char szAsciiArt[1500]; // Descomenta esto cuando agregues el arte ASCII
+  // char szAsciiArt[1500];
 };
 
 /*
