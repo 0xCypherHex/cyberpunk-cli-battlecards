@@ -19,7 +19,7 @@ struct StHumanCards {
   int iPassiveRegen; // Passive Encryption Regen (5%)
   int iActiveHeal;   // Active Heal
   int iIntegrity;    // Health / Integrity (0-500)
-  float fCritChance;   // Critical hit chance percentage (0-100)
+  float fCritChance; // Critical hit chance percentage (0-100)
   char szAsciiArt[1500];
 };
 
@@ -28,6 +28,6 @@ EXTERN se usa para declarar que el arreglo tipo estructura "humanDeck" existe
 pero sus datos estan definidos en otro archivo (humanCards.c) con esto
 permitimos que main.c acceda al arreglo sin duplicar la variable en memoria.
 */
-extern struct StHumanCards humanDeck[HUMAN_DECK_SIZE];
+extern struct StHumanCards astHumanDeck[HUMAN_DECK_SIZE];
 
 #endif
