@@ -1,4 +1,3 @@
-
 // Include Guards
 #ifndef MACHINECARDS_H
 #define MACHINECARDS_H
@@ -6,13 +5,12 @@
 #define MACHINE_DECK_SIZE 12
 
 struct StMachineCards {
-
-  char szName[50];      // Nombre del personaje
-  int iPayload;         // Ataque (Payload)
-  int iEncryptionRegen; // Regeneración pasiva (Encryption)
-  float fDefense;       // Defensa / Probabilidad de esquivar
-  int iHPIntegrity;
-  float fCritChance;
+  char szName[50];   // Character name
+  int iPayload;      // Attack (0-100)
+  int iPassiveRegen; // Passive Encryption Regen
+  float fDefense;    // Defense / Dodge chance (0-100)
+  int iIntegrity;    // Health / Integrity (0-200)
+  float fCritChance; // Critical hit chance percentage (0-100)
   char szAsciiArt[1500];
 };
 
