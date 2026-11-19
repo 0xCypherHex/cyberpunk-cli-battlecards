@@ -1,6 +1,11 @@
+#include "card.h"
 #include "humanCards/humanCards.h"
 #include "machineCards/machineCards.h"
 #include <stdio.h>
 
+int main(void) {
 
-int main(void) { return 0; }
+  displayHumans(&humanDeck[0]);
+
+  return 0;
+}
