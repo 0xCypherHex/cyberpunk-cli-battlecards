@@ -17,6 +17,6 @@ struct StMachineCards {
 };
 
 // Para que main.c pueda ver el mazo
-extern struct StMachineCards MachineDeck[];
+extern struct StMachineCards machineDeck[MACHINE_DECK_SIZE];
 
 #endif
