@@ -15,6 +15,7 @@ int main(void) {
 
   srand((unsigned int)time(NULL));
 
+  // LLamada a funciones
   displayHumanCard(&astHumanDeck[0]);
   displayMachineCard(&astMachineDeck[0]);
 
