@@ -30,21 +30,29 @@ void displayMachineCard(struct StMachineCards *pCard) {
   printf("+----------------------------------+\n");
 }
 
+// Esta función llena un arreglo con una cantidad determinada (iCount) de
+// números aleatorios entre 0 y iMax - 1, asegurando que ninguno se repita.
+// iCount: Cuantos números únicos necesitamos (3 cartas para cada jugador).
 void getUniqueIndices(int iIndices[], int iCount, int iMax) {
+
   int iPicked = 0;
 
   while (iPicked < iCount) {
+
     int iRand = rand() % iMax;
     int iDuplicate = 0;
 
     for (int i = 0; i < iPicked; i++) {
+
       if (iIndices[i] == iRand) {
+
         iDuplicate = 1;
         break;
       }
     }
 
     if (!iDuplicate) {
+
       iIndices[iPicked] = iRand;
       iPicked++;
     }
