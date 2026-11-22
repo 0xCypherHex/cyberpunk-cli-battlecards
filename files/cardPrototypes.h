@@ -9,7 +9,10 @@
 void displayHumanCard(struct StHumanCards *pCard);
 void displayMachineCard(struct StMachineCards *pCard);
 
+// Funcion privada para acomodar el ArtASCII dentro de la carta
+static void displayCenteredAscii(const char *pszArt, int iSizeWidth);
+
 // Barajear Cartas - Obtener cartas sin repetir
-void getUniqueIndices(int iIndices[], int iCount, int iMax);
+void getUniqueIndices(int Indices[], int iCount, int iMax);
 
 #endif

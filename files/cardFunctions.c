@@ -2,38 +2,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void displayCenteredAscii(void *szAsciiArt, int iSizeWitdh) {
+
+  if (szAsciiArt == NULL) {
+
+    return;
+  }
+}
+
 void displayHumanCard(struct StHumanCards *pCard) {
   printf("+----------------------------------+\n");
-  printf("| %s\n", pCard->szName);
+  printf("| %-32.32s |\n", pCard->szName);
   printf("+----------------------------------+\n");
-  printf("%s\n", pCard->szAsciiArt);
+  displayCenteredAscii(pCard->szAsciiArt, 34);
   printf("+----------------------------------+\n");
-  printf("| Payload:       %d\n", pCard->iPayload);
-  printf("| Passive Regen: %d\n", pCard->iPassiveRegen);
-  printf("| Active Heal:   %d\n", pCard->iActiveHeal);
-  printf("| Integrity:     %d\n", pCard->iIntegrity);
-  printf("| Crit Chance:   %.1f%%\n", pCard->fCritChance);
+  printf("| Payload:       %17d |\n", pCard->iPayload);
+  printf("| Passive Regen: %17d |\n", pCard->iPassiveRegen);
+  printf("| Active Heal:   %17d |\n", pCard->iActiveHeal);
+  printf("| Integrity:     %17d |\n", pCard->iIntegrity);
+  printf("| Crit Chance:   %16.1f%% |\n", pCard->fCritChance);
   printf("+----------------------------------+\n");
 }
 
 void displayMachineCard(struct StMachineCards *pCard) {
   printf("+----------------------------------+\n");
-  printf("| %s\n", pCard->szName);
+  printf("| %-32.32s |\n", pCard->szName);
   printf("+----------------------------------+\n");
-  printf("%s\n", pCard->szAsciiArt);
+  displayCenteredAscii(pCard->szAsciiArt, 34);
   printf("+----------------------------------+\n");
-  printf("| Payload:       %d\n", pCard->iPayload);
-  printf("| Passive Regen: %d\n", pCard->iPassiveRegen);
-  printf("| Defense:       %.1f%%\n", pCard->fDefense);
-  printf("| Integrity:     %d\n", pCard->iIntegrity);
-  printf("| Crit Chance:   %.1f%%\n", pCard->fCritChance);
+  printf("| Payload:       %17d |\n", pCard->iPayload);
+  printf("| Passive Regen: %17d |\n", pCard->iPassiveRegen);
+  printf("| Defense:       %16.1f%% |\n", pCard->fDefense);
+  printf("| Integrity:     %17d |\n", pCard->iIntegrity);
+  printf("| Crit Chance:   %16.1f%% |\n", pCard->fCritChance);
   printf("+----------------------------------+\n");
 }
-
 // Esta función llena un arreglo con una cantidad determinada (iCount) de
 // números aleatorios entre 0 y iMax - 1, asegurando que ninguno se repita.
 // iCount: Cuantos números únicos necesitamos (3 cartas para cada jugador).
-void getUniqueIndices(int iIndices[], int iCount, int iMax) {
+void getUniqueIndices(int aiIndices[], int iCount, int iMax) {
 
   int iPicked = 0; // Contador de indices validos que llevamos guardados
 
@@ -51,7 +58,7 @@ void getUniqueIndices(int iIndices[], int iCount, int iMax) {
     for (int i = 0; i < iPicked; i++) {
 
       // Si el indice se repite sale del for
-      if (iIndices[i] == iRandIndice) {
+      if (aiIndices[i] == iRandIndice) {
 
         iFlagDuplicate = 1;
         break;
@@ -62,7 +69,7 @@ void getUniqueIndices(int iIndices[], int iCount, int iMax) {
     if (!iFlagDuplicate) {
 
       // Guarda el número genrado en la siguiente posicion libre
-      iIndices[iPicked] = iRandIndice;
+      aiIndices[iPicked] = iRandIndice;
       iPicked++;
     }
   }

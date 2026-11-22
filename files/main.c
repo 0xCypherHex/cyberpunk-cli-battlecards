@@ -1,5 +1,6 @@
-#include "cardPrototypes.h"
-#include <stdio.h>
+#include "cardFunctions.c"
+#include "humanCards/humanCards.c"
+#include "machineCards/machineCards.c"
 #include <stdlib.h>
 #include <time.h>
 
@@ -59,12 +60,12 @@ que srand() espera unsigned int. Hacer el cast evita advertencias del compilador
   */
   srand((unsigned int)time(NULL));
 
-  int iHumanIdx[3];
+  int aiHumanIdx[3];
   int iCount = 3;
   int iMax = 12;
 
   // Función que aleatoriza los indices
-  getUniqueIndices(iHumanIdx, iCount, HUMAN_DECK_SIZE);
+  getUniqueIndices(aiHumanIdx, iCount, HUMAN_DECK_SIZE);
 
   displayHumanCard(&astHumanDeck[0]);
   displayMachineCard(&astMachineDeck[0]);
