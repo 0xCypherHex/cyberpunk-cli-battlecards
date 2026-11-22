@@ -35,25 +35,34 @@ void displayMachineCard(struct StMachineCards *pCard) {
 // iCount: Cuantos números únicos necesitamos (3 cartas para cada jugador).
 void getUniqueIndices(int iIndices[], int iCount, int iMax) {
 
-  int iPicked = 0;
+  int iPicked = 0; // Contador de indices validos que llevamos guardados
 
+  // Este ciclo se repite hasta conseguir la cantidad de indices pedidos
   while (iPicked < iCount) {
 
-    int iRand = rand() % iMax;
-    int iDuplicate = 0;
+    // Generamos un indice pedido entre 0 y iMax
+    int iRandIndice = rand() % iMax;
 
+    // Esta es una bandera que indica si el número se repitió
+    // 0 = no repetido; 1 = repetido
+    int iFlagDuplicate = 0;
+
+    // Recorremos los indices guardados anteriormente
     for (int i = 0; i < iPicked; i++) {
 
-      if (iIndices[i] == iRand) {
+      // Si el indice se repite sale del for
+      if (iIndices[i] == iRandIndice) {
 
-        iDuplicate = 1;
+        iFlagDuplicate = 1;
         break;
       }
     }
 
-    if (!iDuplicate) {
+    // Si iFlagDuplicate == 0
+    if (!iFlagDuplicate) {
 
-      iIndices[iPicked] = iRand;
+      // Guarda el número genrado en la siguiente posicion libre
+      iIndices[iPicked] = iRandIndice;
       iPicked++;
     }
   }

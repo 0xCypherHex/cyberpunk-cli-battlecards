@@ -58,9 +58,14 @@ que srand() espera unsigned int. Hacer el cast evita advertencias del compilador
 
   */
   srand((unsigned int)time(NULL));
-  void getUniqueIndices(int iIndices[], int iCount, int iMax);
 
-  // LLamada a funciones
+  int iHumanIdx[3];
+  int iCount = 3;
+  int iMax = 12;
+
+  // Función que aleatoriza los indices
+  getUniqueIndices(iHumanIdx, iCount, HUMAN_DECK_SIZE);
+
   displayHumanCard(&astHumanDeck[0]);
   displayMachineCard(&astMachineDeck[0]);
 
