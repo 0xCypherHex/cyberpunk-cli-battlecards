@@ -2,11 +2,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void displayCenteredAscii(void *szAsciiArt, int iSizeWitdh) {
+static void displayCenteredAscii(const char *pszAsciiArt, int iSizeWitdh) {
 
-  if (szAsciiArt == NULL) {
+  if (pszAsciiArt == NULL) {
 
     return;
+  }
+
+  // Apuntamos al primer byte de la linea que vamos a imprimir
+  const char *pLineStart = pszAsciiArt;
+
+  // Repetimos hasta llegar al final de la cadena
+  while (*pLineStart != '\0') {
+
+    // Puntero explorador que inicia en la linea actual
+    const char *pCursor = pLineStart;
+
+    // Contador de caracteres que se ven en pantalla
+    int iVisualChar = 0;
+
+    // Avanzamos el explorador hasta encontrar un salto de linea
+    while (*pCursor != '\0' && *pCursor != '\n') {
+    }
   }
 }
 
