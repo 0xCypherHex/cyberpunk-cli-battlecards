@@ -1,4 +1,4 @@
-#include "cardFunctions.c"
+#include "cardPrototypes.h"
 #include "humanCards/humanCards.h"
 #include "machineCards/machineCards.h"
 #include <stdlib.h>
