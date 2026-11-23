@@ -1,6 +1,6 @@
 #include "cardFunctions.c"
-#include "humanCards/humanCards.c"
-#include "machineCards/machineCards.c"
+#include "humanCards/humanCards.h"
+#include "machineCards/machineCards.h"
 #include <stdlib.h>
 #include <time.h>
 
