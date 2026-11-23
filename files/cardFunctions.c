@@ -23,6 +23,10 @@ static void displayCenteredAscii(const char *pszAsciiArt, int iSizeWitdh) {
 
     // Avanzamos el explorador hasta encontrar un salto de linea
     while (*pCursor != '\0' && *pCursor != '\n') {
+
+      // Byte de continuación en UTF-8 = 0x80
+      if ((unsigned char)*pLineStart && 0xC0 != 0x80) {
+      }
     }
   }
 }
