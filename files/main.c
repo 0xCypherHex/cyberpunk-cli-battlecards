@@ -62,7 +62,6 @@ que srand() espera unsigned int. Hacer el cast evita advertencias del compilador
 
   int aiHumanIdx[3];
   int iCount = 3;
-  int iMax = 12;
 
   // Función que aleatoriza los indices
   getUniqueIndices(aiHumanIdx, iCount, HUMAN_DECK_SIZE);
